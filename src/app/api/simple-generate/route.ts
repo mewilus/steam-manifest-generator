@@ -14,7 +14,7 @@ export async function POST(request: NextRequest) {
     // Import utility functions
     const { getSteamAppDetails, validateAppId } = await import('../../../../../utils/steamAPI');
     const { generateSteamManifest, formatManifest } = await import('../../../../../utils/manifestGenerator');
-    const { generateLuaScript } = await import('../../../../../utils/luaGenerator');
+    import { generateLuaScript } from '../../../utils/luaGenerator';
 
     // Validate input
     if (!validateAppId(appId)) {
